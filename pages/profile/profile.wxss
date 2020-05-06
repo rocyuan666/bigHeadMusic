@@ -1,0 +1,33 @@
+/* pages/profile/profile.wxss */
+.header{
+  width: 750rpx;
+  height: 384rpx;
+  overflow: hidden;
+  position: relative;
+}
+.user-tx-box{
+  position: absolute;
+  left:0;
+  top:-50%;
+  width: 750rpx;
+  height: 750rpx;
+  filter: blur(4px);
+}
+.user-info{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}
+.user-tx{
+  width: 218rpx;
+  height: 218rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: 0 0 10rpx #000;
+}
+.user-name{
+  text-align: center;
+  padding-top: 20rpx;
+  color:#000;
+}

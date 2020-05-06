@@ -1,0 +1,16 @@
+<!--components/roc-musicbox.wxml-->
+<view class="music-box">
+  <view class="text-box">
+    <text class="title">{{title}}</text>
+    <text class="more">更多></text>
+  </view>
+  <view class="content">
+    <view wx:for="{{6}}" wx:key="copyrightId" class="item-box">
+      <image class="item-img" src="{{musicData[item].album.blurPicUrl}}"></image>
+      <view class="music-name">{{musicData[item].name}}</view>
+      <view class="artist-name">
+        <text decode wx:for="{{musicData[item].artists}}" wx:key="id">{{item.name}}&nbsp;</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<!--components/roc-cont/roc-cont.wxml-->
+<view class="roc-cont">
+  <slot></slot>
+</view>

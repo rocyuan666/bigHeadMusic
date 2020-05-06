@@ -1,0 +1,4 @@
+/* components/roc-cont/roc-cont.wxss */
+.roc-cont{
+  padding:0 20rpx;
+}

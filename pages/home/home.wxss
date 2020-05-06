@@ -1,0 +1,23 @@
+.banner-swp{
+  height: 293rpx;
+  margin-bottom: 26rpx;
+}
+.item-img{
+  width: 750rpx;
+  height: 293rpx;
+}
+.text-box{
+  height: 66px;
+  line-height: 66px;
+}
+.title{
+  font-size: 36rpx;
+  color:#000;
+  float: left;
+}
+.more{
+  float: right;
+  font-size: 24rpx;
+  color:#969696;
+  text-decoration: underline;
+}

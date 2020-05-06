@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "roc-musicbox": "/components/roc-musicbox/roc-musicbox",
+    "roc-musiclist": "/components/roc-musiclist/roc-musiclist"
+  }
+}

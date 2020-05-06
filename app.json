@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/profile/profile",
+    "pages/home/home"
+  ],
+  "usingComponents": {
+    "roc-cont": "/components/roc-cont/roc-cont"
+  },
+  "tabBar": {
+    "backgroundColor": "#79d397",
+    "borderStyle":"white",
+    "color": "#fff",
+    "selectedColor": "#ffea49",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "assets/img/home.png",
+        "selectedIconPath": "assets/img/home-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "assets/img/profile.png",
+        "selectedIconPath": "assets/img/profile-active.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTitleText": "大头音乐",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#79d397",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

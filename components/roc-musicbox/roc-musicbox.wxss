@@ -1,0 +1,46 @@
+/* components/roc-musicbox.wxss */
+.text-box{
+  height: 66px;
+  line-height: 66px;
+}
+.title{
+  font-size: 36rpx;
+  color:#000;
+  float: left;
+}
+.more{
+  float: right;
+  font-size: 24rpx;
+  color:#969696;
+  text-decoration: underline;
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item-box{
+  width: 228rpx;
+  min-height: 300rpx;
+  margin-bottom: 22rpx;
+}
+.item-img{
+  width: 226rpx;
+  height: 226rpx;
+  border: 1px solid #eee;
+}
+.music-name{
+  font-size: 26rpx;
+  color:#000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.artist-name {
+  display: flex;
+  font-size: 20rpx;
+  color:#969696;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,33 @@
+/* components/roc-musiclist/roc-musiclist.wxss */
+.music-list{
+  display: flex;
+  padding-bottom: 8rpx;
+  border-bottom: 1px solid #eee;
+  margin-top: 24rpx;
+}
+.list-img{
+  width: 194rpx;
+  height: 194rpx;
+  border: 1px solid #eee;
+}
+.text-box{
+  flex: 1;
+  margin-left: 24rpx;
+}
+.title{
+  font-size: 34rpx;
+  margin-top: 18rpx;
+  margin-bottom: 12rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color:#000;
+}
+.name{
+  font-size: 20rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  color:#969696;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

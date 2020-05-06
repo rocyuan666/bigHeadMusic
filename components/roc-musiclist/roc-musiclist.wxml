@@ -1,0 +1,9 @@
+<!--components/roc-musiclist/roc-musiclist.wxml-->
+<view class="music-list">
+  <image class="list-img" src="{{dataList.coverImgUrl}}"></image>
+  <view class="text-box">
+    <view class="title">{{dataList.name}}></view>
+    <view class="name" wx:for="{{3}}" wx:key="item">
+      <text wx:for="{{dataList.tracks[item].ar}}" wx:key="id">{{item.name}}</text> - {{dataList.tracks[item].name}}</view>
+  </view>
+</view>
