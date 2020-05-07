@@ -1,14 +1,18 @@
 {
   "pages": [
-    "pages/profile/profile",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/details/details",
+    "pages/search/search"
+  ],
+  "requiredBackgroundModes" : [
+    "audio"
   ],
   "usingComponents": {
     "roc-cont": "/components/roc-cont/roc-cont"
   },
   "tabBar": {
     "backgroundColor": "#79d397",
-    "borderStyle":"white",
+    "borderStyle": "white",
     "color": "#fff",
     "selectedColor": "#ffea49",
     "list": [
@@ -19,10 +23,10 @@
         "selectedIconPath": "assets/img/home-active.png"
       },
       {
-        "pagePath": "pages/profile/profile",
-        "text": "我的",
-        "iconPath": "assets/img/profile.png",
-        "selectedIconPath": "assets/img/profile-active.png"
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "assets/img/search.png",
+        "selectedIconPath": "assets/img/search-active.png"
       }
     ]
   },

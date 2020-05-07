@@ -1,19 +1,37 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
 
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
-}
+// 播放音乐
+import {
+  playMusicData
+} from "../network/home/index"
+const innerAudioContext = getApp().gData.innerAudioContext
 
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
-}
-
-module.exports = {
-  formatTime: formatTime
+export function playMusicTool(event){
+  const id = event.currentTarget.dataset.id
+  const item = event.currentTarget.dataset.item
+  // 根据id 请求 歌曲播放链接
+  playMusicData(id).then(res => {
+    // console.log(item)
+    if(res.data.data[0].url !== null){
+      // innerAudioContext.autoplay = true
+      innerAudioContext.src = res.data.data[0].url
+      innerAudioContext.title = item.name
+      innerAudioContext.onPlay(() => {
+        wx.showToast({
+          title: '开始播放',
+          icon: "none"
+        })
+      })
+      innerAudioContext.onPause(() => {
+        wx.showToast({
+          title: '暂停播放',
+          icon: "none"
+        })
+      })
+    }else{
+      wx.showToast({
+        title: '抱歉歌曲没有版权~',
+        icon: "none"
+      })
+    }
+  })
 }

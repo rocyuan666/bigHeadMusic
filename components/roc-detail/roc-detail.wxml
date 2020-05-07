@@ -1,0 +1,12 @@
+<!--components/roc-detail/roc-detail.wxml-->
+<view>
+  <view class="header">{{title}}</view>
+  
+  <view class="row" wx:for="{{NewMusic}}" wx:key="id" bind:tap="playMusic" data-id="{{item.id}}" data-item="{{item}}">
+    <view class="index">{{index + 1}}</view>
+    <view class="name">
+      <text wx:for="{{item.album.artists || item.ar || item.artists}}" wx:key="id">{{item.name}} - </text>
+    {{item.name}}
+    </view>
+  </view>
+</view>

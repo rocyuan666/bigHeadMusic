@@ -1,0 +1,31 @@
+/* components/roc-detail/roc-detail.wxss */
+.header{
+  height: 300rpx;
+  line-height: 300rpx;
+  background-color: #ffea49;
+  font-size: 50rpx;
+  text-align: center;
+}
+.row{
+  display: flex;
+  height: 108rpx;
+  line-height: 108rpx;
+  border-bottom: 1rpx solid #e8e8e8;
+  padding:0 20rpx;
+}
+/* .active{
+  background-color: #f6f6f6;
+} */
+.index{
+  min-width: 70rpx;
+  font-size: 30rpx;
+  color: #969696;
+}
+.name{
+  flex: 1;
+  font-size: 30rpx;
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

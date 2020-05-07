@@ -1,0 +1,4 @@
+<!--pages/details.wxml-->
+<view>
+  <roc-detail title="{{title}}" NewMusic="{{NewMusic}}"></roc-detail>
+</view>

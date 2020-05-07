@@ -80,3 +80,24 @@ export function getMusicList(idx){
         }
     })
 }
+
+// 播放音乐
+export function playMusicData(id){
+    return request({
+        url: "/song/url",
+        data: {
+            id
+        }
+    })
+}
+
+// 搜索歌曲
+export function searchMusicData(keywords,limit){
+    return request({
+        url: "/search",
+        data: {
+            keywords,
+            limit
+        }
+    })
+}

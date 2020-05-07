@@ -6,7 +6,6 @@ import {
 
 
 Page({
-
   data: {
     banners: [],
     hyNewMusic: [],
@@ -14,10 +13,10 @@ Page({
     biaoshengList: {},
     douyinList: {},
     shuochangList: {},
-    huayujinquList: {}
+    huayujinquList: {},
+    gudianList: {},
+    regeList: {}
   },
-
-  
   onLoad: function (options) {
     // banner图片请求
     getBannerData().then(res => {
@@ -25,6 +24,7 @@ Page({
       this.setData({
         banners: res.data.banners
       })
+      wx.hideLoading()
     })
     /*
       全部:0
@@ -38,12 +38,14 @@ Page({
       this.setData({
         hyNewMusic: res.data.data
       })
+      wx.hideLoading()
     })
     getHeatMusicData(96).then(res => {
       // console.log(res)
       this.setData({
         omNewMusic: res.data.data
       })
+      wx.hideLoading()
     })
     /*
     排行榜
@@ -82,64 +84,90 @@ Page({
     "32": 云音乐欧美新歌榜
     "33": 说唱TOP榜
     */
+   getMusicList(1).then(res => {
+    this.setData({
+      regeList: res.data.playlist
+    })
+    wx.hideLoading()
+    // console.log(res.data)
+  })
     getMusicList(3).then(res => {
       this.setData({
         biaoshengList: res.data.playlist
       })
+      wx.hideLoading()
       // console.log(res.data)
     })
     getMusicList(26).then(res => {
       this.setData({
         douyinList: res.data.playlist
       })
-      console.log(res.data)
+      wx.hideLoading()
+      // console.log(res.data)
     })
     getMusicList(33).then(res => {
       this.setData({
         shuochangList: res.data.playlist
       })
-      console.log(res.data)
+      wx.hideLoading()
+      // console.log(res.data)
     })
     getMusicList(17).then(res => {
       this.setData({
         huayujinquList: res.data.playlist
       })
-      console.log(res.data)
+      wx.hideLoading()
+      // console.log(res.data)
+    })
+    getMusicList(24).then(res => {
+      console.log(res)
+      this.setData({
+        gudianList: res.data.playlist
+      })
+      wx.hideLoading()
+      // console.log(res.data)
+    })
+  },
+  // 事件方法-----------------------------------------------
+  moreNewhyClick(){
+    wx.navigateTo({
+      url: '/pages/details/details?type=7',
+    })
+  },
+  moreNewomClick(){
+    wx.navigateTo({
+      url: '/pages/details/details?type=96',
     })
   },
 
-  
-  onReady: function () {
-    
+  list1Click(){
+    wx.navigateTo({
+      url: '/pages/details/details?list=1',
+    })
   },
-
-  
-  onShow: function () {
-    
+  list3Click(){
+    wx.navigateTo({
+      url: '/pages/details/details?list=3',
+    })
   },
-
-  
-  onHide: function () {
-
+  list26Click(){
+    wx.navigateTo({
+      url: '/pages/details/details?list=26',
+    })
   },
-
-  
-  onUnload: function () {
-
+   list33Click(){
+    wx.navigateTo({
+      url: '/pages/details/details?list=33',
+    })
   },
-
-  
-  onPullDownRefresh: function () {
-
+  list17Click(){
+    wx.navigateTo({
+      url: '/pages/details/details?list=17',
+    })
   },
-
-  
-  onReachBottom: function () {
-
-  },
-
-  
-  onShareAppMessage: function () {
-
+  list24Click(){
+    wx.navigateTo({
+      url: '/pages/details/details?list=24',
+    })
   }
 })

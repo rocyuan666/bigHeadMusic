@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "roc-detail": "/components/roc-detail/roc-detail"
+  }
+}

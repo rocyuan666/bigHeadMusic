@@ -15,19 +15,23 @@
   </swiper>
   <roc-cont>
     <!-- 新歌 -->
-    <roc-musicbox title="华语新歌" musicData="{{hyNewMusic}}"></roc-musicbox>
-    <roc-musicbox title="欧美新歌" musicData="{{omNewMusic}}"></roc-musicbox>
+    <roc-musicbox title="华语新歌" bind:moreClick="moreNewhyClick" musicData="{{hyNewMusic}}"></roc-musicbox>
+    <roc-musicbox title="欧美新歌" bind:moreClick="moreNewomClick" musicData="{{omNewMusic}}"></roc-musicbox>
     <!-- 排行榜 -->
     <view class="music-list-box">
       <view class="text-box">
         <text class="title">排行榜</text>
-        <text class="more">更多></text>
+        <!-- <text class="more">更多></text> -->
       </view>
       <!-- 榜单 -->
-      <roc-musiclist title="云音乐飙升榜" dataList="{{biaoshengList}}"></roc-musiclist>
-      <roc-musiclist title="抖音飙升榜" dataList="{{douyinList}}"></roc-musiclist>
-      <roc-musiclist title="说唱top榜" dataList="{{shuochangList}}"></roc-musiclist>
-      <roc-musiclist title="华语金曲榜" dataList="{{huayujinquList}}"></roc-musiclist>
+      <roc-musiclist title="云音乐热歌榜" dataList="{{regeList}}" bind:tap="list1Click" ></roc-musiclist>
+      <roc-musiclist title="云音乐飙升榜" dataList="{{biaoshengList}}" bind:tap="list3Click" ></roc-musiclist>
+      <roc-musiclist title="抖音飙升榜" dataList="{{douyinList}}" bind:tap="list26Click"></roc-musiclist>
+      <roc-musiclist title="华语金曲榜" dataList="{{huayujinquList}}" bind:tap="list17Click"></roc-musiclist>
+      <roc-musiclist title="古典音乐榜" dataList="{{gudianList}}" bind:tap="list24Click"></roc-musiclist>
+      <roc-musiclist title="说唱top榜" dataList="{{shuochangList}}" bind:tap="list33Click"></roc-musiclist>
+
+      
     </view>
   </roc-cont>
   
