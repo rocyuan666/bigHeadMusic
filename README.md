@@ -9,6 +9,10 @@
 
 <img src="https://luojing.top/xcximg/err.png" />
 
+## 视频演示
+
+<video controls  src="https://luojing.top/xcximg/bighead.mp4"></video>
+
 ## 应用截图
 
 <img src="https://luojing.top/xcximg/1.jpg" />
@@ -17,3 +21,4 @@
 <img src="https://luojing.top/xcximg/4.jpg" />
 <img src="https://luojing.top/xcximg/5.jpg" />
 <img src="https://luojing.top/xcximg/6.jpg" />
+
